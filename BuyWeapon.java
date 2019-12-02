@@ -32,8 +32,9 @@ public class BuyWeapon extends GoToStore
 	@Override
 	public void arrivedAt(Structure structure)
 	{
-		if (structure.getName().equals("Store"))
-      ; // TODO: choose a weapon for the player/human
+		if (structure.getName().equals("Store")) {
+			_human.setCurrentWeapon(new SingleShotWeapon(getPlayer()));
+		}
     super.arrivedAt(structure);
 	}
 
